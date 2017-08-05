@@ -66,7 +66,22 @@ describe "#translate" do
   end
 
   # Test-driving bonus:
+
+  it "capitalizes a single word" do
+    s = translate("Test")
+    expect(s).to eq("Esttay")
+  end
+
+  it "capitalizes multiple words" do
+    s = translate("Harry Potter and the Goblet of Fire")
+    expect(s).to eq("Arryhay Otterpay anday ethay Obletgay ofay Irefay")
+  end
   # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
   # * retain the punctuation from the original phrase
+
+  it "retains punctuaction" do
+    s = translate("This is a sentence. Hello!")
+    expect(s).to eq("Isthay isay aay entencesay. Ellohay!")
+  end
 
 end
